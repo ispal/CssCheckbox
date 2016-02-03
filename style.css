@@ -1,0 +1,489 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700);
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  margin: 0;
+  background: #3D5A59;
+  font-family: 'Raleway', Arial, sans-serif; }
+
+.section {
+  text-align: center;
+  height: 100%;
+  margin: 0 auto;
+  padding: 6em 0; }
+  .section__title {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #fff;
+    margin-bottom: 3em; }
+  .section--aava {
+    background: #2994B2; }
+  .section--tuuli {
+    background: #474744; }
+  .section--vesi {
+    background: #54567A; }
+  .section--sade {
+    background: #2D4659; }
+  .section--ilma {
+    background: #095062; }
+  .section--tuli {
+    background: #068B78; }
+
+.toggle-button {
+  margin: 0 20px; }
+
+/*
+ * Toggle button styles
+ */
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  color: #fff; }
+  .toggle-button label {
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: left; }
+  .toggle-button input {
+    display: none; }
+  .toggle-button__icon {
+    cursor: pointer;
+    pointer-events: none; }
+    .toggle-button__icon:before, .toggle-button__icon:after {
+      content: "";
+      position: absolute;
+      top: 45%;
+      left: 35%;
+      transition: 0.2s ease-out; }
+
+/*
+ * Toggle button variables
+ */
+/*
+ * Toggle button styles
+ */
+.toggle-button--aava label {
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.2s;
+  border-radius: 2rem; }
+  .toggle-button--aava label:before, .toggle-button--aava label:after {
+    position: absolute;
+    right: 1.5rem;
+    transition: all 0.2s .1s ease-out; }
+  .toggle-button--aava label:before {
+    content: attr(data-on-text); }
+  .toggle-button--aava label:after {
+    content: attr(data-off-text); }
+
+.toggle-button--aava input[type=checkbox] + label {
+  width: 120px;
+  background: #FF5335; }
+  .toggle-button--aava input[type=checkbox] + label:before {
+    opacity: 0;
+    transform: translate(0, 20px); }
+  .toggle-button--aava input[type=checkbox] + label:after {
+    opacity: 1;
+    transform: translate(0, 0); }
+
+.toggle-button--aava input[type=checkbox]:checked ~ label {
+  width: 120px;
+  background: #61B136; }
+  .toggle-button--aava input[type=checkbox]:checked ~ label:before {
+    opacity: 1;
+    transform: translate(0, 0); }
+  .toggle-button--aava input[type=checkbox]:checked ~ label:after {
+    opacity: 0;
+    transform: translate(0, -20px); }
+
+.toggle-button--aava input[type=checkbox]:checked ~ .toggle-button__icon:before {
+  transform: translate(-10%, 100%) rotate(45deg);
+  width: 16.66667px; }
+
+.toggle-button--aava input[type=checkbox]:checked ~ .toggle-button__icon:after {
+  transform: translate(30%) rotate(-45deg); }
+
+.toggle-button--aava .toggle-button__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px; }
+  .toggle-button--aava .toggle-button__icon:before, .toggle-button--aava .toggle-button__icon:after {
+    height: 3px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+  .toggle-button--aava .toggle-button__icon:before {
+    width: 25px;
+    transform: rotate(45deg); }
+  .toggle-button--aava .toggle-button__icon:after {
+    width: 25px;
+    transform: rotate(-45deg); }
+
+/*
+ * Toggle button variables
+ */
+/*
+ * Toggle button styles
+ */
+.toggle-button--tuuli label {
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.2s;
+  border-radius: 2rem; }
+  .toggle-button--tuuli label:before, .toggle-button--tuuli label:after {
+    position: absolute;
+    right: 1rem;
+    transition: all 0.2s .1s ease-out; }
+
+.toggle-button--tuuli input[type=checkbox] + label {
+  width: 50px;
+  background: #FF5335; }
+  .toggle-button--tuuli input[type=checkbox] + label:before {
+    opacity: 0;
+    transform: translate(0, 20px); }
+  .toggle-button--tuuli input[type=checkbox] + label:after {
+    opacity: 1;
+    transform: translate(0, 0); }
+
+.toggle-button--tuuli input[type=checkbox]:checked ~ label {
+  width: 50px;
+  background: #61B136; }
+
+.toggle-button--tuuli input[type=checkbox]:checked ~ .toggle-button__icon:before {
+  transform: translate(-30%, 100%) rotate(45deg) scale(0.6, 1); }
+
+.toggle-button--tuuli input[type=checkbox]:checked ~ .toggle-button__icon:after {
+  transform: translate(20%) rotate(-45deg); }
+
+.toggle-button--tuuli .toggle-button__icon {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  left: 0; }
+  .toggle-button--tuuli .toggle-button__icon:before, .toggle-button--tuuli .toggle-button__icon:after {
+    width: 25px;
+    height: 3px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    margin-left: -10%;
+    top: 48%; }
+  .toggle-button--tuuli .toggle-button__icon:before {
+    transform: rotate(45deg); }
+  .toggle-button--tuuli .toggle-button__icon:after {
+    transform: rotate(-45deg); }
+
+/*
+ * Toggle button variables
+ */
+/*
+ * Toggle button styles
+ */
+.toggle-button--vesi label {
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.2s;
+  border-radius: 2rem; }
+  .toggle-button--vesi label:before, .toggle-button--vesi label:after {
+    position: absolute;
+    right: 1.5rem;
+    transition: all 0.2s .1s ease-out; }
+  .toggle-button--vesi label:before {
+    content: attr(data-on-text); }
+  .toggle-button--vesi label:after {
+    content: attr(data-off-text); }
+
+.toggle-button--vesi input[type=checkbox] + label {
+  width: 150px;
+  background: #FF5335; }
+  .toggle-button--vesi input[type=checkbox] + label:before {
+    opacity: 0;
+    transform: translate(0, 20px); }
+  .toggle-button--vesi input[type=checkbox] + label:after {
+    opacity: 1;
+    transform: translate(0, 0); }
+
+.toggle-button--vesi input[type=checkbox]:checked ~ label {
+  width: 180px;
+  background: #61B136; }
+  .toggle-button--vesi input[type=checkbox]:checked ~ label:before {
+    opacity: 1;
+    transform: translate(0, 0); }
+  .toggle-button--vesi input[type=checkbox]:checked ~ label:after {
+    opacity: 0;
+    transform: translate(0, -20px); }
+
+.toggle-button--vesi input[type=checkbox]:checked ~ .toggle-button__icon:before {
+  transform: translate(-10%, 100%) rotate(45deg);
+  width: 16.66667px; }
+
+.toggle-button--vesi input[type=checkbox]:checked ~ .toggle-button__icon:after {
+  transform: translate(30%) rotate(-45deg); }
+
+.toggle-button--vesi .toggle-button__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px; }
+  .toggle-button--vesi .toggle-button__icon:before, .toggle-button--vesi .toggle-button__icon:after {
+    height: 3px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+  .toggle-button--vesi .toggle-button__icon:before {
+    width: 25px;
+    transform: rotate(90deg); }
+  .toggle-button--vesi .toggle-button__icon:after {
+    width: 25px;
+    transform: rotate(0); }
+
+/*
+ * Toggle button variables
+ */
+/*
+ * Toggle button styles
+ */
+.toggle-button--sade {
+  width: 100px;
+  height: 20px; }
+  .toggle-button--sade label {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    transition: all 0.2s;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+    .toggle-button--sade label:before, .toggle-button--sade label:after {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      transition: all 0.2s .1s ease-out; }
+    .toggle-button--sade label:before {
+      content: attr(data-on-text); }
+    .toggle-button--sade label:after {
+      content: attr(data-off-text); }
+  .toggle-button--sade input + label:before {
+    opacity: 0;
+    transform: translate(20px, 0); }
+  .toggle-button--sade input + label:after {
+    opacity: 1;
+    transform: translate(0, 0); }
+  .toggle-button--sade input:checked ~ label:before {
+    opacity: 1;
+    transform: translate(0, 0); }
+  .toggle-button--sade input:checked ~ label:after {
+    opacity: 0;
+    transform: translate(20px, 0); }
+  .toggle-button--sade input[type=checkbox]:checked ~ .toggle-button__icon:before, .toggle-button--sade input[type=checkbox]:checked ~ .toggle-button__icon:after {
+    background: #61B136; }
+  .toggle-button--sade input[type=checkbox]:checked ~ .toggle-button__icon:before {
+    transform: translate(-30%, 70%) rotate(45deg) scale(0.7, 1); }
+  .toggle-button--sade input[type=checkbox]:checked ~ .toggle-button__icon:after {
+    transform: translate(20%) rotate(-45deg); }
+  .toggle-button--sade .toggle-button__icon {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 0;
+    left: 0; }
+    .toggle-button--sade .toggle-button__icon:before, .toggle-button--sade .toggle-button__icon:after {
+      width: calc(20px - 8px);
+      height: 3px;
+      border-radius: 3px;
+      background: #fff;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+      margin-left: -3px;
+      top: 40%;
+      background: #FF5335; }
+    .toggle-button--sade .toggle-button__icon:before {
+      transform: rotate(45deg); }
+    .toggle-button--sade .toggle-button__icon:after {
+      transform: rotate(-45deg); }
+  .toggle-button--sade:hover label {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+  .toggle-button--sade:hover input[type=checkbox]:not(:checked) ~ .toggle-button__icon:before {
+    animation: icon-hover-before .2s; }
+  .toggle-button--sade:hover input[type=checkbox]:not(:checked) ~ .toggle-button__icon:after {
+    animation: icon-hover-after .2s; }
+
+@keyframes icon-hover-before {
+  0% {
+    transform: rotate(45deg) scale(1, 1); }
+  100% {
+    transform: rotate(45deg) scale(1.2, 1.2); } }
+
+@keyframes icon-hover-after {
+  0% {
+    transform: rotate(-45deg) scale(1, 1); }
+  50% {
+    transform: rotate(-45deg) scale(1.2, 1.2); } }
+
+/*
+ * Toggle button variables
+ */
+/*
+ * Toggle button styles
+ */
+.toggle-button--ilma {
+  width: 100px;
+  height: 20px; }
+  .toggle-button--ilma label {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    transition: all 0.2s;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+    .toggle-button--ilma label:before, .toggle-button--ilma label:after {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      transition: all 0.2s .1s ease-out; }
+    .toggle-button--ilma label:before {
+      content: attr(data-on-text); }
+    .toggle-button--ilma label:after {
+      content: attr(data-off-text); }
+  .toggle-button--ilma input + label:before {
+    opacity: 0;
+    transform: translate(20px, 0); }
+  .toggle-button--ilma input + label:after {
+    opacity: 1;
+    transform: translate(0, 0); }
+  .toggle-button--ilma input:checked ~ label:before {
+    opacity: 1;
+    transform: translate(0, 0); }
+  .toggle-button--ilma input:checked ~ label:after {
+    opacity: 0;
+    transform: translate(20px, 0); }
+  .toggle-button--ilma input[type=checkbox]:checked ~ .toggle-button__icon:before, .toggle-button--ilma input[type=checkbox]:checked ~ .toggle-button__icon:after {
+    background: #61B136;
+    transition: none;
+    transform-origin: left center; }
+  .toggle-button--ilma input[type=checkbox]:checked ~ .toggle-button__icon:before {
+    animation: iconShowBefore .3s;
+    transform: translate(0, 0) rotate(45deg) scale(0.6, 1); }
+  .toggle-button--ilma input[type=checkbox]:checked ~ .toggle-button__icon:after {
+    animation: iconShowAfter .6s;
+    transform: translate(4px, 6px) rotate(-45deg); }
+  .toggle-button--ilma .toggle-button__icon {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 0;
+    left: 0; }
+    .toggle-button--ilma .toggle-button__icon:before, .toggle-button--ilma .toggle-button__icon:after {
+      width: calc(20px - 6px);
+      height: 3px;
+      border-radius: 3px;
+      background: #fff;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+      margin-left: -4px;
+      top: 40%;
+      background: #FF5335;
+      transform-origin: center center; }
+    .toggle-button--ilma .toggle-button__icon:before {
+      transform: rotate(45deg); }
+    .toggle-button--ilma .toggle-button__icon:after {
+      transform: rotate(-45deg); }
+  .toggle-button--ilma:hover label {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+  .toggle-button--ilma:hover input[type=checkbox]:not(:checked) ~ .toggle-button__icon:before {
+    animation: iconHoverBefore .2s; }
+  .toggle-button--ilma:hover input[type=checkbox]:not(:checked) ~ .toggle-button__icon:after {
+    animation: iconHoverAfter .2s; }
+
+@keyframes iconShowBefore {
+  0% {
+    transform: translate(0, 0) rotate(45deg) scale(0, 1); }
+  100% {
+    transform: translate(0, 0) rotate(45deg) scale(0.6, 1); } }
+
+@keyframes iconShowAfter {
+  0% {
+    opacity: 0; }
+  49% {
+    opacity: 0; }
+  50% {
+    opacity: 1;
+    transform: translate(4px, 6px) rotate(-45deg) scale(0, 1); }
+  100% {
+    transform: translate(4px, 6px) rotate(-45deg) scale(1, 1); } }
+
+@keyframes iconHoverBefore {
+  0% {
+    transform: rotate(45deg) scale(1, 1); }
+  100% {
+    transform: rotate(45deg) scale(1.2, 1.2); } }
+
+@keyframes iconHoverAfter {
+  0% {
+    transform: rotate(-45deg) scale(1, 1); }
+  50% {
+    transform: rotate(-45deg) scale(1.2, 1.2); } }
+
+/*
+ * Toggle button variables
+ */
+/*
+ * Toggle button styles
+ */
+.toggle-button--tuli label {
+  line-height: 20px; }
+
+.toggle-button--tuli input[type=checkbox]:checked ~ .toggle-button__icon {
+  background: #fff; }
+  .toggle-button--tuli input[type=checkbox]:checked ~ .toggle-button__icon:before, .toggle-button--tuli input[type=checkbox]:checked ~ .toggle-button__icon:after {
+    opacity: 1; }
+
+.toggle-button--tuli .toggle-button__icon {
+  display: inline-block;
+  float: left;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s;
+  margin-right: 10px;
+  border: 2px solid #fff;
+  border-radius: 1px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+  .toggle-button--tuli .toggle-button__icon:before, .toggle-button--tuli .toggle-button__icon:after {
+    top: 5px;
+    left: 2px;
+    width: 12px;
+    height: 2px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    top: 35%;
+    background: #61B136;
+    opacity: 0;
+    transform-origin: left center; }
+  .toggle-button--tuli .toggle-button__icon:before {
+    transform: translate(0, 0) rotate(45deg) scale(0.6, 1); }
+  .toggle-button--tuli .toggle-button__icon:after {
+    transform: translate(4px, 6px) rotate(-45deg); }
+
+.toggle-button--tuli:hover input[type=checkbox]:not(:checked) ~ .toggle-button__icon {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
