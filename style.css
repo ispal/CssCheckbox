@@ -196,7 +196,7 @@ body {
   .toggle-button--vesi label:before, .toggle-button--vesi label:after {
     position: absolute;
     right: 1.5rem;
-    transition: all 0.2s .1s ease-out; }
+    transition: all 0.2s .15s ease-out; }
   .toggle-button--vesi label:before {
     content: attr(data-on-text); }
   .toggle-button--vesi label:after {
