@@ -1,0 +1,78 @@
+/*
+ * Toggle button variables
+ */
+$background-on:     #61B136;
+$background-off:    #FF5335;
+
+$border-radius:     1px;
+
+$icon-bg:           #fff;
+
+$item-width:        140px;
+$height:            20px;
+
+/*
+ * Toggle button styles
+ */
+.toggle-button--tuli {
+
+    label {
+        line-height: $height;
+    }
+
+    input[type=checkbox]:checked ~ .toggle-button__icon {
+        
+        background: #fff;
+
+        &:before,
+        &:after {
+            opacity: 1;
+        }
+
+    }
+
+    .toggle-button__icon {
+        display: inline-block;
+        float: left;
+        position: relative;
+        width: $height;
+        height: $height;
+        transition: all 0.2s;
+        margin-right: 10px;
+        
+        border: 2px solid #fff;
+        border-radius: $border-radius;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+        text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+
+        &:before,
+        &:after {
+            top: 5px;
+            left: 2px;
+            width: 12px;
+            height: 2px;
+            border-radius: 3px;
+            background: $icon-bg;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+            top: 35%;
+            background: $background-on;
+            opacity: 0;
+            transform-origin: left center;
+        }
+        &:before {
+            transform: translate(0,0) rotate(45deg) scale(0.6, 1);
+        }
+        &:after  {
+            transform: translate(4px,6px) rotate(-45deg);
+        }
+        
+    }
+
+    &:hover {
+
+        input[type=checkbox]:not(:checked) ~ .toggle-button__icon {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+    }
+}

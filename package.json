@@ -1,0 +1,17 @@
+{
+  "name": "ip-css-checkbox",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass --output-style compressed --include-path effects style.scss style.css",
+    "develop": "npm run browsersync & node-sass -w --include-path effects style.scss style.css",
+    "browsersync": "browser-sync start --server --files 'effects/*'"
+  },
+  "author": "Irko Palenius",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "node-sass": "^3.4.2"
+  }
+}

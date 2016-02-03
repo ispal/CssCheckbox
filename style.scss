@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700);
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+body {
+    margin: 0;  
+    background: #3D5A59;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+.container {
+    
+}
+
+.section {
+    text-align: center;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 6em 0;
+
+    &__title {
+        font-size: 1.1em;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #fff;
+        margin-bottom: 3em;
+    }
+
+    &--aava {
+        background: #2994B2;
+    }
+    &--tuuli {
+        background: #474744;
+    }
+    &--vesi {
+        background: #54567A;
+    }
+    &--sade {
+        background: #2D4659;
+    }
+    &--ilma {
+        background: #095062;
+    }
+    &--tuli {
+        background: #068B78;
+    }
+}
+
+.toggle-button {
+    margin: 0 20px;
+}
+
+@import 'common-button';
+@import 'effects/aava';
+@import 'effects/tuuli';
+@import 'effects/vesi';
+@import 'effects/sade';
+@import 'effects/ilma';
+@import 'effects/tuli';

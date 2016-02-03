@@ -1,0 +1,148 @@
+/*
+ * Toggle button variables
+ */
+$background-on:     #61B136;
+$background-off:    #FF5335;
+
+$border-radius:     2px;
+
+$icon-bg:           #fff;
+
+$height:           20px;
+
+/*
+ * Toggle button styles
+ */
+.toggle-button--sade {
+
+    width: 100px;
+    height: $height;
+
+    label {
+        position: absolute;
+        left: 0;
+        width: $height;
+        height: $height;
+        line-height: $height;
+        transition: all 0.2s;
+        background: #fff;
+        border-radius: $border-radius;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+        text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+        
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            left: $height + 10px;
+            transition: all 0.2s .1s ease-out;
+        }
+
+        &:before {
+            content:attr(data-on-text);
+        }
+        &:after {
+            content:attr(data-off-text);
+        }
+    }
+
+    input + label {
+        
+        &:before {
+            opacity: 0;
+            transform: translate(20px, 0);
+        }
+        &:after {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+
+    input:checked ~ label {
+        &:before {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+        &:after {
+            opacity: 0;
+            transform: translate(20px, 0);
+        }
+    }
+
+    input[type=checkbox]:checked ~ .toggle-button__icon {
+
+        &:before,
+        &:after {
+            background: $background-on;
+        }
+
+        &:before {
+            transform: translate(-30%, 70%) rotate(45deg) scale(0.7, 1);
+        }
+        &:after {
+            transform: translate(20%) rotate(-45deg);
+        }
+
+    }
+
+    .toggle-button__icon {
+        position: absolute;
+        height: $height;
+        width: $height;
+        top: 0;
+        left: 0;
+
+        &:before,
+        &:after {
+            width: calc(#{$height} - 8px);
+            height: 3px;
+            border-radius: 3px;
+            background: $icon-bg;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+            margin-left: -3px;
+            top: 40%;
+            background: $background-off;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after  {
+            transform: rotate(-45deg);
+        }
+        
+    }
+
+    &:hover {
+        label {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        input[type=checkbox]:not(:checked) ~ .toggle-button__icon {
+            &:before {
+                animation: icon-hover-before .2s;
+            }
+            &:after {
+                animation: icon-hover-after .2s;
+            }
+        }
+    }
+}
+
+@keyframes icon-hover-before{
+    0% {
+        transform: rotate(45deg) scale(1, 1);
+    }
+    100% {
+        transform: rotate(45deg) scale(1.2, 1.2);
+    }
+}
+@keyframes icon-hover-after{
+    0% {
+        transform: rotate(-45deg) scale(1, 1);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1.2, 1.2);
+    }
+}
