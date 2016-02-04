@@ -448,7 +448,8 @@ body {
  * Toggle button styles
  */
 .toggle-button--tuli label {
-  line-height: 20px; }
+  line-height: 20px;
+  text-indent: 30px; }
 
 .toggle-button--tuli input[type=checkbox]:checked ~ .toggle-button__icon {
   background: #fff; }
@@ -456,13 +457,12 @@ body {
     opacity: 1; }
 
 .toggle-button--tuli .toggle-button__icon {
-  display: inline-block;
-  float: left;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 20px;
   height: 20px;
   transition: all 0.2s;
-  margin-right: 10px;
   border: 2px solid #fff;
   border-radius: 1px;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
