@@ -8,7 +8,7 @@ $border-radius:     1px;
 
 $icon-bg:           #fff;
 
-$item-width:        140px;
+$item-width:        160px;
 $height:            20px;
 
 /*
@@ -18,6 +18,7 @@ $height:            20px;
 
     label {
         line-height: $height;
+        text-indent: $height + 10px;
     }
 
     input[type=checkbox]:checked ~ .toggle-button__icon {
@@ -32,13 +33,12 @@ $height:            20px;
     }
 
     .toggle-button__icon {
-        display: inline-block;
-        float: left;
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: $height;
         height: $height;
         transition: all 0.2s;
-        margin-right: 10px;
         
         border: 2px solid #fff;
         border-radius: $border-radius;
